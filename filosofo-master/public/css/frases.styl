@@ -1,0 +1,250 @@
+gris_texto = #7A7A7A
+verde_claro = #7a967f
+verde = #50935d
+verde_oscuro = #1b556d
+gris = #ededed
+
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+a
+	color verde
+
+body
+	background gris
+	color verde_oscuro
+	font-family tahoma
+	font-size 16px
+
+footer
+	background verde
+	color rgba(white,0.5)
+	padding 1em 0
+	text-align center
+	width 100%
+	h3
+		font-size 14px
+		font-weight normal
+		strong
+			display block 
+
+		.mejor
+			&:before
+			&:after
+				content " - "
+
+header
+	background verde_oscuro
+	box-shadow 0 5px 0 rgba(0,0,0,0.2)
+	color white
+	overflow hidden
+	padding 0.5em
+	position relative
+	z-index 2
+
+	.logo
+		border-right 1px solid gris
+		float left
+		width 100px
+		img
+			width 80px
+			border-radius 50%
+
+	.titular
+		margin 14px 80px 0 120px
+
+		.filtro
+			color gris
+			font-size 14px
+			font-style italic
+			font-weight normal
+			text-decoration none
+			cursor default
+
+		.publicar
+			background verde
+			color white
+			float right
+			padding 0.2em 0.5em
+			text-decoration none
+			text-shadow 0px 0px 0px black
+			border-radius 3px
+
+			&:before
+				content "\e600"
+				display inline-block
+				font-family "iconitos"
+				margin 0 3px 0 0
+				text-shadow none
+
+		.titulo
+			font-size 24px
+			font-weight bold
+			margin 0
+			padding 0
+
+	.usuario
+		position absolute
+		right 10px
+		top 38px
+
+		.avatar
+			margin 0 1.1em 0 0
+			position relative
+			z-index 69
+			img
+				border-radius 50%
+				width 50px
+		.flechita
+			background verde
+			color white
+			display block
+			padding 2px
+			position absolute
+			right 0
+			text-align right
+			text-decoration none
+			top 15px
+			width 50%
+			z-index 0
+
+			&:after
+				content "\e603"
+				display block
+				font-family "iconitos"
+				margin 1px 0 0 1px
+				text-shadow 1px 1px 0px black
+
+nav
+	background verde
+	border-left 15px solid white
+	position relative
+
+	&:before
+		border-bottom 20px solid transparent
+		border-left 7px solid white
+		border-top 20px solid transparent
+		content ""
+		left 0px
+		position absolute
+		top 0
+
+	.menu
+		height 40px
+		line-height 40px
+		margin 0
+		padding 0
+		overflow-x auto
+		white-space nowrap
+
+		li
+			display inline-block
+
+			a
+				color white
+				display block
+				margin 0 0.5em
+				padding 0 0.2em
+				text-decoration none
+
+				&:hover
+					background rgba(black,0.1)
+
+.posts
+	padding 0.5em
+
+	.post
+		background white
+		box-shadow 2px 2px 10px rgba(black, 0.1)
+		color gris_texto
+		margin-bottom 0.5em
+
+		.acciones
+			border-top 3px solid verde
+			padding 0.5em
+			overflow hidden
+
+			.datos
+				float right
+				.comentarios
+					border-radius 3px
+					color verde_oscuro
+					margin 0 0.1em 0 0
+					padding 2px 0px
+					text-decoration none
+
+				.coment
+					color verde_oscuro
+					padding 0px 5px
+
+			.votos
+				float right
+				color verde_oscuro
+				.gusta
+					text-decoration none
+					&:before
+						font-family "iconitos"
+						font-size 1.5em
+						vertical-align middle
+
+				.gusta
+					color verde_oscuro
+					&:before
+						content "\e601"
+
+		.descripcion
+			.detalles
+				height 160px
+				margin-left 130px
+
+				.autor
+					margin 0.5em 0 2em 0
+					font-style italic
+
+				.fecha
+					float right
+					margin -1.1em 1em 0 0
+
+				.titulo
+					color gris_oscuro
+					font-size 18px
+					margin 0
+					padding 0.5em 0.5em 0 0
+
+			.imagen
+				float left
+				img
+					height 160px
+					vertical-align top
+					width 120px
+
+@media screen and (min-width: 768px)
+
+	header
+		.titular
+			.publicar
+				font-size 1.3em
+				padding-left 2em
+				position relative
+
+				&:before
+					left 10px
+					font-size 1.2em
+					position absolute
+					top 4px
+
+	.posts
+		.post
+			display inline-block
+			width 49%
+			vertical-align top
+			&:nth-child(odd)
+				margin-right 0.5%

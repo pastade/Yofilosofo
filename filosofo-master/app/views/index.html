@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" 
+		content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Yo filósofo</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/frases.css" />
+
+    <script src="/js/vendor/jquery-2.0.3.js"></script>
+    <script src="/js/vendor/underscore.js"></script>
+    <script src="/js/vendor/backbone.js"></script>
+    <script src="/js/vendor/swig.js"></script>
+
+    <script src="/js/vendor/socket.io.js"></script>
+
+    <script src="/js/vendor/neon.js"></script>
+    <script src="/js/vendor/CustomEvent.js"></script>
+    <script src="/js/vendor/CustomEventSupport.js"></script>
+    <script src="/js/vendor/PonyExpress.js"></script>    
+
+    <script src="/js/init.js"></script>
+
+    <script src="/js/backbone/models/article.js"></script>
+    <script src="/js/backbone/collections/articles.js"></script>
+    <script src="/js/backbone/views/article.js"></script>
+    <script src="/js/backbone/views/app.js"></script>
+    <script src="/js/backbone/routers/base.js"></script>
+
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<div class="logo">
+			<img src="img/logo.jpg" alt="Yo Filósofo" />
+		</div>
+		<div class="titular">
+			<h1 class="titulo">
+				Yo filósofo
+			</h1>
+			<div>
+				<a class="filtro" href="#">
+					Mis frases!
+				</a>
+				<a class="publicar" href="#">
+					Escribir
+				</a>
+			</div>
+		</div>
+	</header>
+
+    <form class="formulario" action="">
+    	<p>
+    		<label for="titulo">Frase</label>
+    		<input placeholder="¡Qué es lo que piensas!" id="titulo" type="text" name="titulo">
+    	</p>
+    	<p>
+    		<label for="autor">Autor</label>
+    		<input placeholder="¿Cómo te llamas?" id="autor" type="text" name="autor">
+    		<input value="Publicar" type="submit" />
+    	</p>
+    </form>
+
+	<section class="posts">
+	</section>
+
+	<footer>
+		<h3>
+			<strong>Powered by Paul</strong>
+			<span class="sofi">
+				Sofibras 2013
+			</span>
+		</h3>
+	</footer>
+	{% raw %}
+	<script type="text/template" id="article-template">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="{{ image }}" />
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">{{ title }}</h2>
+					<p class="autor">
+						{{ user }}
+					</p>
+				</div>
+			</div>
+			<div class="acciones">
+				<div class="votos">
+					<a class="gusta" href="#"></a>
+					<span class="total">{{ votes }}</span>
+				</div>
+			</div>
+	</script>
+	{% endraw %}
+</body>
+</html>
