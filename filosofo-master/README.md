@@ -1,7 +1,7 @@
 filosofo
 =====
 
-Web app de la clase profesional de front-end de mejorando.la
+Para ver Hay que instalar el servidor. by Paul
 
 Install
 
@@ -10,11 +10,3 @@ Install
 Run server
 
 	node server
-
-### Interesting links
-
-[Backbone](backbonejs.org)
-
-[Tutorial de backbone](https://github.com/addyosmani/backbone-fundamentals/blob/gh-pages/backbone-fundamentals.md)
-
-[Grunt.js](http://gruntjs.com/getting-started)
